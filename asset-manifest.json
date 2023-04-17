@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/calendar/static/js/main.d571e0fe.js",
+    "static/media/arrow.svg": "/calendar/static/media/arrow.4a417c59c00c7397acfe4242b66b1d8b.svg",
+    "static/media/plus.svg": "/calendar/static/media/plus.1182a99cc98687a5ac136e421501889f.svg",
+    "index.html": "/calendar/index.html",
+    "main.d571e0fe.js.map": "/calendar/static/js/main.d571e0fe.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.d571e0fe.js"
+  ]
+}
