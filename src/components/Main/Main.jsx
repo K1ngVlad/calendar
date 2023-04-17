@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { GlobalContext } from '../../GlobalContext';
+import { timeArr, cellsArr } from './api';
 import {
   MainStyle,
   TimeStyle,
@@ -7,17 +8,6 @@ import {
   DateCellsStyle,
   Cell,
 } from './styles';
-
-const timeArr = Array.from({ length: 24 }, (_, i) => {
-  if (i < 10) return `0${i}`;
-  return `${i}`;
-});
-
-const cellsArr = Array.from({ length: 168 }, (_, i) => {
-  const hourId = Math.floor(i / 7);
-  const minutId = i % 7;
-  return [hourId, minutId];
-});
 
 const Main = () => {
   const {

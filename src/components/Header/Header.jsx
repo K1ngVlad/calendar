@@ -11,7 +11,6 @@ const Header = () => {
     const result = prompt('Enter event time \nYYYY-MM-DD HH:mm:ss');
     if (!result) return;
     const newDate = new Date(result);
-    console.log(`${newDate}`);
     if (`${newDate}` !== 'Invalid Date') {
       const year = newDate.getFullYear();
       const month = newDate.getMonth();

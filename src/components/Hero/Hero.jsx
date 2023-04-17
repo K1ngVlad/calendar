@@ -1,4 +1,5 @@
 import { DayElem } from './DayElem';
+import { monthArr, weekArr } from './api';
 import {
   HeroStyle,
   HeroContainerStyle,
@@ -12,22 +13,6 @@ import icon from '../../assets/arrow.svg';
 import { useContext } from 'react';
 import { GlobalContext } from '../../GlobalContext';
 import { changeDate } from '../../functions';
-
-const monthArr = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December',
-];
-const weekArr = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
 
 const Hero = () => {
   const {

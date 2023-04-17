@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 const MainStyle = styled.main.attrs((props) => ({ ...props }))`
   width: 100%;
-  /* height: 280px; */
   height: calc(100% - 355px);
   display: grid;
   gap: 2px;

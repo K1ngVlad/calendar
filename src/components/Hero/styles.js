@@ -4,8 +4,6 @@ const HeroStyle = styled.div.attrs((props) => ({ ...props }))`
   width: 100%;
   height: 145px;
   display: grid;
-  /* align-items: center;
-  justify-content: space-between; */
   background: #f7f7f6;
   border-top: solid 2px #e6e7e7;
   border-bottom: solid 2px #e6e7e7;
@@ -26,8 +24,6 @@ const HeroContainerStyle = styled.div.attrs((props) => ({ ...props }))`
 const DaysStyle = styled.div.attrs((props) => ({ ...props }))`
   width: 100%;
   height: 70px;
-  /* display: flex;
-  justify-content: space-between; */
   display: grid;
   grid-template-columns: repeat(7, 1fr);
 `;
