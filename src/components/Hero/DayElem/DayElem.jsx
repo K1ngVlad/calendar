@@ -14,21 +14,22 @@ const DayElem = (props) => {
     setChoisenCell,
     dateRef,
   } = useContext(GlobalContext);
+
+  const onClickHeandler = () => {
+    const date = dateRef.current;
+    date.setDate(date.getDate() + numberDay - currentWeekDay);
+    changeDateLite(
+      dateRef,
+      setCurrentDay,
+      setCurrentMonth,
+      setCurrentYear,
+      setCurrentWeekDay
+    );
+    setChoisenCell(null);
+  };
+
   return (
-    <DayElemStyle
-      onClick={() => {
-        const date = dateRef.current;
-        date.setDate(date.getDate() + numberDay - currentWeekDay);
-        changeDateLite(
-          dateRef,
-          setCurrentDay,
-          setCurrentMonth,
-          setCurrentYear,
-          setCurrentWeekDay
-        );
-        setChoisenCell(null);
-      }}
-    >
+    <DayElemStyle onClick={onClickHeandler}>
       <WeekWordStyle>{weekDay}</WeekWordStyle>
       <DayNumberStyle primary={primary}>{day}</DayNumberStyle>
     </DayElemStyle>

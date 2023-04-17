@@ -44,9 +44,23 @@ const Hero = () => {
     setChoisenCell,
     dateRef,
   } = useContext(GlobalContext);
+
+  const onClickHeandler = (direct) => {
+    const date = dateRef.current;
+    date.setDate(direct === 'left' ? currentDay - 7 : currentDay + 7);
+    changeDate(
+      dateRef,
+      setCurrentDay,
+      setCurrentMonth,
+      setCurrentYear,
+      setCurrentWeek,
+      setCurrentWeekDay
+    );
+    setChoisenCell(null);
+  };
+
   return (
     <HeroStyle>
-      {/* <div>sad</div> */}
       <HeroContainerStyle>
         <DaysStyle>
           {currentWeek &&
@@ -60,43 +74,18 @@ const Hero = () => {
                   primary={currentWeekDay === i}
                 />
               );
-              // return <DayElem />;
             })}
         </DaysStyle>
         <MonthStyle>
           <ArrowStyle
-            onClick={() => {
-              const date = dateRef.current;
-              date.setDate(currentDay - 7);
-              changeDate(
-                dateRef,
-                setCurrentDay,
-                setCurrentMonth,
-                setCurrentYear,
-                setCurrentWeek,
-                setCurrentWeekDay
-              );
-              setChoisenCell(null);
-            }}
+            onClick={() => onClickHeandler('left')}
             src={icon}
             direct="left"
             alt="<"
           />
           <MonthTextStyle>{`${monthArr[currentMonth]} ${currentYear}`}</MonthTextStyle>
           <ArrowStyle
-            onClick={() => {
-              const date = dateRef.current;
-              date.setDate(currentDay + 7);
-              changeDate(
-                dateRef,
-                setCurrentDay,
-                setCurrentMonth,
-                setCurrentYear,
-                setCurrentWeek,
-                setCurrentWeekDay
-              );
-              setChoisenCell(null);
-            }}
+            onClick={() => onClickHeandler('right')}
             src={icon}
             direct="right"
             alt=">"
