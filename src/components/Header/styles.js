@@ -19,6 +19,8 @@ const IconStyle = styled.img.attrs((props) => ({ ...props }))`
   width: 30px;
   height: 30px;
   cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
 `;
 
 export { HeaderStyle, TitleStyle, IconStyle };

@@ -4,8 +4,8 @@ const HeroStyle = styled.div.attrs((props) => ({ ...props }))`
   width: 100%;
   height: 145px;
   display: grid;
-  align-items: center;
-  justify-content: space-between;
+  /* align-items: center;
+  justify-content: space-between; */
   background: #f7f7f6;
   border-top: solid 2px #e6e7e7;
   border-bottom: solid 2px #e6e7e7;
@@ -47,6 +47,8 @@ const ArrowStyle = styled.img.attrs(({ src, alt, onClick }) => ({
 }))`
   height: 100%;
   cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
   transform: ${({ direct }) => direct === 'right' && 'rotate(180deg)'};
 `;
 

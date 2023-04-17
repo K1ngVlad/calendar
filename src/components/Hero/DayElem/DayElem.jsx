@@ -11,6 +11,7 @@ const DayElem = (props) => {
     setCurrentMonth,
     setCurrentYear,
     setCurrentWeekDay,
+    setChoisenCell,
     dateRef,
   } = useContext(GlobalContext);
   return (
@@ -25,6 +26,7 @@ const DayElem = (props) => {
           setCurrentYear,
           setCurrentWeekDay
         );
+        setChoisenCell(null);
       }}
     >
       <WeekWordStyle>{weekDay}</WeekWordStyle>

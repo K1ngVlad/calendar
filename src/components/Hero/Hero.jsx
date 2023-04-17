@@ -41,6 +41,7 @@ const Hero = () => {
     setCurrentYear,
     setCurrentWeek,
     setCurrentWeekDay,
+    setChoisenCell,
     dateRef,
   } = useContext(GlobalContext);
   return (
@@ -75,6 +76,7 @@ const Hero = () => {
                 setCurrentWeek,
                 setCurrentWeekDay
               );
+              setChoisenCell(null);
             }}
             src={icon}
             direct="left"
@@ -93,6 +95,7 @@ const Hero = () => {
                 setCurrentWeek,
                 setCurrentWeekDay
               );
+              setChoisenCell(null);
             }}
             src={icon}
             direct="right"

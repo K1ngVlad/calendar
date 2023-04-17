@@ -7,6 +7,8 @@ const DayElemStyle = styled.div.attrs((props) => ({ ...props }))`
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
 `;
 
 const WeekWordStyle = styled.span.attrs((props) => ({ ...props }))`

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const FooterStyle = styled.div.attrs((props) => ({ ...props }))`
+const FooterStyle = styled.footer.attrs((props) => ({ ...props }))`
   width: 100%;
   height: 80px;
   background: #f7f7f6;
@@ -9,6 +9,17 @@ const FooterStyle = styled.div.attrs((props) => ({ ...props }))`
   display: flex;
   align-items: center;
   padding: 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
 
-export { FooterStyle };
+const FooterBtnStyle = styled.span.attrs((props) => ({ ...props }))`
+  font-size: 26px;
+  color: #fe3130;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+`;
+
+export { FooterStyle, FooterBtnStyle };

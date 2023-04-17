@@ -10,6 +10,8 @@ const App = () => {
   const [currentWeek, setCurrentWeek] = useState(Array(7).fill(0));
   const [currentMonth, setCurrentMonth] = useState(null);
   const [currentYear, setCurrentYear] = useState(null);
+  const [eventDates, setEventDates] = useState(new Set());
+  const [choisenCell, setChoisenCell] = useState(null);
 
   useEffect(() => {
     changeDate(
@@ -21,7 +23,6 @@ const App = () => {
       setCurrentWeekDay
     );
   }, [
-    dateRef,
     setCurrentDay,
     setCurrentWeek,
     setCurrentMonth,
@@ -42,7 +43,11 @@ const App = () => {
         setCurrentYear,
         setCurrentWeek,
         setCurrentWeekDay,
+        setEventDates,
+        setChoisenCell,
         dateRef,
+        eventDates,
+        choisenCell,
       }}
     >
       <Container>
