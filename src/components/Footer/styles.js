@@ -9,6 +9,9 @@ const FooterStyle = styled.footer.attrs((props) => ({ ...props }))`
   display: flex;
   align-items: center;
   padding: 0 50px;
+  @media (max-width: 425px) {
+    padding: 0 25px;
+  }
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -7,6 +7,9 @@ const HeaderStyle = styled.header.attrs((props) => ({ ...props }))`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media (max-width: 425px) {
+    padding: 50px 25px;
+  }
 `;
 
 const TitleStyle = styled.h1.attrs((props) => ({ ...props }))`
@@ -21,6 +24,7 @@ const IconStyle = styled.img.attrs((props) => ({ ...props }))`
   cursor: pointer;
   user-select: none;
   -webkit-user-select: none;
+  margin-left: 10px;
 `;
 
 export { HeaderStyle, TitleStyle, IconStyle };

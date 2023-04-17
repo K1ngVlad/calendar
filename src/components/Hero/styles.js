@@ -17,8 +17,7 @@ const HeroStyle = styled.div.attrs((props) => ({ ...props }))`
 const HeroContainerStyle = styled.div.attrs((props) => ({ ...props }))`
   height: 100%;
   grid-area: container;
-  padding: 20px;
-  /* padding: 20px 20px 20px 40px; */
+  padding: 20px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -27,8 +26,10 @@ const HeroContainerStyle = styled.div.attrs((props) => ({ ...props }))`
 const DaysStyle = styled.div.attrs((props) => ({ ...props }))`
   width: 100%;
   height: 70px;
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
 `;
 
 const MonthStyle = styled.div.attrs((props) => ({ ...props }))`

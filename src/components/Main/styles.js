@@ -5,6 +5,7 @@ const MainStyle = styled.main.attrs((props) => ({ ...props }))`
   /* height: 280px; */
   height: calc(100% - 355px);
   display: grid;
+  gap: 2px;
   grid-template-columns: 1fr 7fr;
   grid-template-rows: 1fr;
   overflow-y: scroll;
@@ -18,6 +19,9 @@ const TimeStyle = styled.main.attrs((props) => ({ ...props }))`
   grid-template-rows: repeat(24, 52px);
   user-select: none;
   -webkit-user-select: none;
+  @media (max-width: 425px) {
+    grid-template-rows: repeat(24, 32px);
+  }
 `;
 
 const TimeElemStyle = styled.div.attrs((props) => ({ ...props }))`
@@ -37,6 +41,10 @@ const DateCellsStyle = styled.div.attrs((props) => ({ ...props }))`
   border-top: solid 25px white;
   padding-top: 2px;
   background: #e7e6e7;
+  @media (max-width: 425px) {
+    border-top: solid 15px white;
+    grid-template-rows: repeat(24, 30px);
+  }
 `;
 
 const Cell = styled.div.attrs(({ onClick }) => ({ onClick }))`
